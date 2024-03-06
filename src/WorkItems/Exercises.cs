@@ -27,7 +27,7 @@
         /// Write a program that return the given number, 
         /// but for multiples of three, return "Fizz" instead of the number, 
         /// and for the multiples of five, return "Buzz". For numbers that 
-        /// are multiples of both three and five, print "FizzBuzz"
+        /// are multiples of both three and five, return "FizzBuzz"
         /// </summary>
         public static string ExerciseThree(int number)
         {
