@@ -42,7 +42,7 @@
         /// </summary>
         public static bool ExerciseFour(string wordone, string wordtwo)
         {
-            return false;
+            return wordone == wordtwo;
         }
 
         /// <summary>
