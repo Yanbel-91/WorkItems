@@ -4,7 +4,8 @@
     {
         /// <summary>
         /// SORTING ALGORITHM 
-        /// Write a sorting algorithm to sort a List of string in ascending order. 
+        /// Write a sorting algorithm to sort a List of string in ascending order
+        /// without using any built-in functions.
         /// Please focus on stability, cost efficiency and low memory consumption.
         /// </summary>
         public static List<string> ExerciseOne(List<string> UnsortedList)
