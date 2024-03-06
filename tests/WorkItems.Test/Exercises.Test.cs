@@ -48,6 +48,14 @@ namespace WorkItems.Test
         public void ExerciseTwoTest(bool expected, string word) => Assert.Equal(Exercises.ExerciseTwo(word), expected);
 
         [Theory]
+        [InlineData(1, "1")]
+        [InlineData(2, "2")]
+        [InlineData(3, "Fizz")]
+        [InlineData(4, "4")]
+        [InlineData(5, "Buzz")]
+        [InlineData(6, "Fizz")]
+        [InlineData(7, "7")]
+        [InlineData(8, "8")]
         [InlineData(9, "Fizz")]
         [InlineData(10, "Buzz")]
         [InlineData(11, "11")]
