@@ -4,36 +4,7 @@ namespace WorkItems.Test
 {
     public class ExercisesTest
     {
-        [Theory]
-        [InlineData("Alpha", 0)]
-        [InlineData("Beta", 1)]
-        [InlineData("Chi", 2)]
-        [InlineData("Delta", 3)]
-        [InlineData("Epsilon", 4)]
-        [InlineData("Eta", 5)]
-        [InlineData("Gamma", 6)]
-        [InlineData("Iota", 7)]
-        [InlineData("Kappa", 8)]
-        [InlineData("Lambda", 9)]
-        [InlineData("My", 10)]
-        [InlineData("Ny", 11)]
-        [InlineData("Omega", 12)]
-        [InlineData("Omikron", 13)]
-        [InlineData("Phi", 14)]
-        [InlineData("Pi", 15)]
-        [InlineData("Psi", 16)]
-        [InlineData("Rho", 17)]
-        [InlineData("Sigma", 18)]
-        [InlineData("Tau", 19)]
-        [InlineData("Theta", 20)]
-        [InlineData("Xi", 21)]
-        [InlineData("Ypsilon", 22)]
-        [InlineData("Zeta", 23)]
-        public void ExerciseOneTest(string solutionword, int Index)
-        {
-            List<string> solutions = Exercises.ExerciseOne(ExercisesTestModels.Elements);
-            Assert.Equal(solutions[Index], solutionword);
-        }
+        
 
         [Theory]
         [InlineData(false, "test")]
@@ -45,7 +16,8 @@ namespace WorkItems.Test
         [InlineData(true, "Ebbe")]
         [InlineData(true, "AnnaHetzteHanna")]
         [InlineData(false, "Baustelle")]
-        public void ExerciseTwoTest(bool expected, string word) => Assert.Equal(Exercises.ExerciseTwo(word), expected);
+        public void ExerciseOneTest(bool expected, string word) => Assert.Equal(Exercises.ExerciseOne(word), expected);
+
 
         [Theory]
         [InlineData(1, "1")]
@@ -149,7 +121,39 @@ namespace WorkItems.Test
         [InlineData(99, "Fizz")]
         [InlineData(100, "Buzz")]
 
-        public void ExerciseThreeTest(int number, string expected) => Assert.Equal(expected, Exercises.ExerciseThree(number));
+        public void ExerciseTwoTest(int number, string expected) => Assert.Equal(expected, Exercises.ExerciseTwo(number));
+
+
+        [Theory]
+        [InlineData("Alpha", 0)]
+        [InlineData("Beta", 1)]
+        [InlineData("Chi", 2)]
+        [InlineData("Delta", 3)]
+        [InlineData("Epsilon", 4)]
+        [InlineData("Eta", 5)]
+        [InlineData("Gamma", 6)]
+        [InlineData("Iota", 7)]
+        [InlineData("Kappa", 8)]
+        [InlineData("Lambda", 9)]
+        [InlineData("My", 10)]
+        [InlineData("Ny", 11)]
+        [InlineData("Omega", 12)]
+        [InlineData("Omikron", 13)]
+        [InlineData("Phi", 14)]
+        [InlineData("Pi", 15)]
+        [InlineData("Psi", 16)]
+        [InlineData("Rho", 17)]
+        [InlineData("Sigma", 18)]
+        [InlineData("Tau", 19)]
+        [InlineData("Theta", 20)]
+        [InlineData("Xi", 21)]
+        [InlineData("Ypsilon", 22)]
+        [InlineData("Zeta", 23)]
+        public void ExerciseThreeTest(string solutionword, int Index)
+        {
+            List<string> solutions = Exercises.ExerciseThree(ExercisesTestModels.Elements);
+            Assert.Equal(solutions[Index], solutionword);
+        }
 
 
         [Theory]
@@ -167,8 +171,8 @@ namespace WorkItems.Test
 
         public static IEnumerable<object?[]> Data = new[]
         {
-            new object[] { new List<int> {5, 1, 3, 9 } },
-            new object[] { new List<int> { 7, 1, 5, 3, 8, 6, 2 } },
+            [new List<int> {5, 1, 3, 9 }],
+            [new List<int> { 7, 1, 5, 3, 8, 6, 2 }],
             new object[] { new List<int> { 99, 101, 4, 22, 36, 78, 81 } }
         };
 
