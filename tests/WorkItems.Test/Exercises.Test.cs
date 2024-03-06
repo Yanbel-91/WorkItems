@@ -165,15 +165,15 @@ namespace WorkItems.Test
         public void ExerciseFourTest(bool expected, string wordone, string wordtwo) => Assert.Equal(expected, Exercises.ExerciseFour(wordone, wordtwo));
 
 
-        public static readonly List<object[]> _data =
-        [
-            [5, 1, 3, 9],
-            [7, 1, 5, 3, 8, 6, 2],
-            [99, 101, 4, 22, 36, 78, 81]
-        ];
+        public static IEnumerable<object?[]> Data = new[]
+        {
+            new object[] { new List<int> {5, 1, 3, 9 } },
+            new object[] { new List<int> { 7, 1, 5, 3, 8, 6, 2 } },
+            new object[] { new List<int> { 99, 101, 4, 22, 36, 78, 81 } }
+        };
 
         [Theory]
-        [MemberData(nameof(_data))]
-        public void ExerciseFiveTest(List<int> numbers) => Assert.Equal(numbers.Max(), Exercises.ExerciseFive(numbers));
+        [MemberData(nameof(Data))]
+        public void ExerciseFiveTest(List<int> numbers) => Assert.Equal(numbers.Max(), Exercises.ExerciseFive(numbers.ToList()));
     }
 }
