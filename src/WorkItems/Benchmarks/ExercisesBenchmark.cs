@@ -9,7 +9,7 @@ namespace WorkItems.Benchmarks
         public void ExerciseOneBenchmark()
         {
             List<string> list = [ "Beta", "Gamma", "Alpha", "Epsilon"];
-            list = Exercises.ExerciseOne(list);
+            list = Exercises.ExerciseThree(list);
         }
 
         [Benchmark]
